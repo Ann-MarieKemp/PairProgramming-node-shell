@@ -1,5 +1,6 @@
 let pwd = require('./pwd');
 let ls = require('./ls');
+let cat = require('./cat');
 
 
 
@@ -12,6 +13,10 @@ process.stdin.on('data', (data) =>{
   }
   else if(cmd === 'ls'){
     ls();
+  }
+  else if(cmd === 'cat'){
+    cat();
+
   }
   else {
     process.stdout.write('you typed: ' + cmd);
